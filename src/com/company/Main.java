@@ -8,11 +8,8 @@ public class Main {
                 "8-656","Hyderabad","telangana",500045);
         Flight f1=new Flight("Hyderabad to Mumbai ","89d5ABS","Indigo",200,100);
 
-
-        String locationlist []={"abids","hyderabad"};
-        TouristTicket T1= new TouristTicket("Grand hotel",locationlist);
-        RegularTicket t2=new RegularTicket("Snacks order");
-
+        Ticket t1 = new RegularTicket("1254","Mumbai","Hyderabad","2021-12-31T18:00:00","2022-01-1T1:30:00","98",true,5525,p1,f1,"Regular Ticket","available");
+        System.out.println("\n\nTicket details\n\n"+"Pnr number: "+ t1.getPnr()+"\nPassenger Details "+ p1.getContact()+ "\nFlight Details"+f1.getFlightDetails()+ "\nDeparture-"+ t1.getFrom()+" Time-"+t1.getDepartureDetails()+ " arrival-"+ t1.getTo()+" Time-"+t1.getArrivalDetails()+ "\nSeat number-"+t1.getSeatNumber());
 
         //unable to access private attributes of Flight class directly outside the class
 
@@ -23,12 +20,9 @@ public class Main {
 
 
 //accessing attributes of flight class via getters and setters
-        System.out.println("Flight details \n"+"flight number: "+f1.getFlightNumber()+ "\nairline name:  "+f1.getAirlineName()+
+        System.out.println("\n\nFlight details \n\n"+"flight number: "+f1.getFlightNumber()+ "\nairline name:  "+f1.getAirlineName()+
                 "\ndeparture location: "+"\ncapacity: "+f1.getCapacity()+"\nseats booked: "+f1.getNoOfSeatsBooked());
 
-
-        System.out.println("\nHotel details\nhotelhoteladdress   "+T1.getHotelAddress()+"\nselectedTouristLocation   "+Arrays.toString(T1.getSelectedTouristLocation()));
-        System.out.println(t2.getspecialServices());
 
 
     }

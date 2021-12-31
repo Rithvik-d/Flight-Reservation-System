@@ -57,7 +57,7 @@ public class Flight {
 
 
     public String getFlightDetails(){
-        return  "\nFlight Number: "+flightNumber+ "\nAirline NAme: " +airlineName+ "\nCapacity: "+capacity+ "\nBooked Seats: "+SeatsBooked;
+        return  "\nFlight Number: "+flightNumber+ "\nAirline Name: " +airlineName+ "\nCapacity: "+capacity+ "\nBooked Seats: "+SeatsBooked;
     }
 
     public boolean checkSeatAvailability(){

@@ -2,7 +2,7 @@ package com.company;
 
 import java.time.LocalDateTime;
 
-public class Ticket {
+public abstract class Ticket {
     private String pnr, to, from, departureDetails, arrivalDetails;
     private String seatNumber;
     private boolean isBooked;
