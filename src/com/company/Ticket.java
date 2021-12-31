@@ -3,13 +3,13 @@ package com.company;
 import java.time.LocalDateTime;
 
 public class Ticket {
-    public String pnr, to, from, departureDetails, arrivalDetails;
-    public String seatNumber;
-    public boolean isBooked;
-    public  Passenger passenger;
-    public  Flight flight;
-    public  float ticketPrice;
-    public String bookingType;
+    private String pnr, to, from, departureDetails, arrivalDetails;
+    private String seatNumber;
+    private boolean isBooked;
+    private  Passenger passenger;
+    private  Flight flight;
+    private float ticketPrice;
+    private String bookingType;
 
     public Ticket(String pnr, String to, String from, String departureDetails, String arrivalDetails, String seatNumber,
                   boolean isBooked, float ticketPrice, Passenger passenger, Flight flight,String bookingType){

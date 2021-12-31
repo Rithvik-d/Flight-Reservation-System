@@ -1,10 +1,29 @@
 package com.company;
 
 public class Passenger {
-    public int id;
-    public Address address;
+    private int id;
+    private static int idCounter=0;
+    private static class Address {
+        String addressStreet, city, state;
+        int pinCode;
 
-    public static class Contact{
+        Address(String addressStreet, String city, String state, int pinCode) {
+            this.addressStreet = addressStreet;
+            this.city = city;
+            this.state = state;
+            this.pinCode = pinCode;
+        }
+        public void updateAddressDetails(Address address, String addressStreet, String city, String state, int pinCode){
+            this.addressStreet = addressStreet;
+            this.city = city;
+            this.state = state;
+            this.pinCode = pinCode;
+        }
+    }
+
+        private Address address;
+
+    private static class Contact{
         String name, phoneNumber, emailId;
         Contact(String name, String phoneNumber, String emailId){
             this.name=name;
@@ -15,7 +34,8 @@ public class Passenger {
     private Contact contact;
 
     public Passenger(String name, String phoneNumber, String emailId, String addressStreet, String city, String state, int pinCode){
-
+        this.id = ++idCounter;
+        //instantiating Address and Contact classes inside the Passenger constructor
         this.address=new Address(addressStreet, city, state, pinCode);
         this.contact=new Contact(name, phoneNumber, emailId);
     }
@@ -27,6 +47,11 @@ public class Passenger {
     public String getContact(){
         return "Name: " + contact.name + ", Phone: " + contact.phoneNumber + ", Email: " + contact.emailId;
     }
-
+    public String getAddressDetails() {
+        return "Street: " + address.addressStreet + ", City: " + address.city + ", State: " + address.state;
+    }
+    public int getIdCounter(){
+        return idCounter;
+    }
 
 }

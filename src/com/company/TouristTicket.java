@@ -2,6 +2,7 @@ package com.company;
 
 public class TouristTicket {
 private String hotelAddress;
+// all ready made private
 private String [] selectedTouristLocation;
  TouristTicket(String hotelAddress,String[] selectedTouristLocation){
      this.hotelAddress=hotelAddress;
